@@ -7,7 +7,7 @@ type Skill = {
   icon: string;
 };
 
-const skills: Skill[] = [
+export const skills: Skill[] = [
   { name: "HTML", icon: skill_logo.html },
   { name: "CSS", icon: skill_logo.css },
   { name: "JavaScript", icon: skill_logo.javascript },

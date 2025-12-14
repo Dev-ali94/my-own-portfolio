@@ -2,87 +2,21 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { motion, useInView } from "framer-motion";
 import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { projects } from "../lib/data.ts"
 
 const categories = ["All", "Web Development", "Power BI", "Data Analytics"];
-
-const projects = [
-  {
-    id: 1,
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with payment integration",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop",
-    category: "web development",
-    tech: ["React", "Node.js", "MongoDB"],
-    github: "#",
-    live: "#",
-  },
-  {
-    id: 2,
-    title: "Task Management App",
-    description: "Collaborative project management tool for teams",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-    category: "web development",
-    tech: ["Next.js", "PostgreSQL", "Prisma"],
-    github: "#",
-    live: "#",
-  },
-  {
-    id: 3,
-    title: "Fitness Tracker",
-    description: "Mobile app for tracking workouts and nutrition",
-    image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=600&h=400&fit=crop",
-    category: "web development",
-    tech: ["React Native", "Firebase"],
-    github: "#",
-    live: "#",
-  },
-  {
-    id: 4,
-    title: "Analytics Dashboard",
-    description: "Data visualization using Power BI",
-    image: "https://images.unsplash.com/photo-1581092580490-24e7dcf817e0?w=600&h=400&fit=crop",
-    category: "power bi",
-    tech: ["Power BI", "DAX", "SQL"],
-    github: "#",
-    live: "#",
-  },
-  {
-    id: 5,
-    title: "Stock Analysis Tool",
-    description: "Real-time financial data analysis and visualization",
-    image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=600&h=400&fit=crop",
-    category: "data analytics",
-    tech: ["Python", "Pandas", "Plotly"],
-    github: "#",
-    live: "#",
-  },
-  {
-    id: 6,
-    title: "Customer Analytics Platform",
-    description: "Customer behavior analysis and segmentation",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-    category: "data analytics",
-    tech: ["R", "Shiny", "D3.js"],
-    github: "#",
-    live: "#",
-  },
-];
-
 const ProjectsSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [showScrollButtons, setShowScrollButtons] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true, margin: "-100px" });
-
   const filteredProjects =
     activeCategory === "All"
       ? projects
-      : projects.filter((p) => 
-          p.category.toLowerCase() === activeCategory.toLowerCase().replace(" ", "")
-        );
-
-  // Check if scrolling is needed
+      : projects.filter((p) =>
+        p.category.toLowerCase() === activeCategory.toLowerCase().replace(" ", "")
+      );
   useEffect(() => {
     const checkScroll = () => {
       if (projectsRef.current) {
@@ -95,23 +29,18 @@ const ProjectsSection = () => {
     window.addEventListener('resize', checkScroll);
     return () => window.removeEventListener('resize', checkScroll);
   }, [filteredProjects]);
-
   const scroll = useCallback((direction: "left" | "right") => {
     if (!projectsRef.current) return;
-
     const container = projectsRef.current;
-    const scrollAmount = 320; // Adjust based on your card width + gap
+    const scrollAmount = 320;
     const currentScroll = container.scrollLeft;
-    
     container.scrollTo({
-      left: direction === "left" 
-        ? currentScroll - scrollAmount 
+      left: direction === "left"
+        ? currentScroll - scrollAmount
         : currentScroll + scrollAmount,
       behavior: "smooth"
     });
   }, []);
-
-  // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "ArrowLeft") {
@@ -120,18 +49,15 @@ const ProjectsSection = () => {
         scroll("right");
       }
     };
-
     if (projectsRef.current) {
       projectsRef.current.addEventListener("keydown", handleKeyDown);
     }
-
     return () => {
       if (projectsRef.current) {
         projectsRef.current.removeEventListener("keydown", handleKeyDown);
       }
     };
   }, [scroll]);
-
   return (
     <section id="projects" className="py-20 bg-gradient-to-b from-background to-secondary/5" ref={containerRef}>
       <div className="container mx-auto px-4 relative">
@@ -161,11 +87,10 @@ const ProjectsSection = () => {
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`px-4 py-2 rounded-full font-medium transition-all duration-300 border ${
-                activeCategory === category
+              className={`px-4 py-2 rounded-full font-medium transition-all duration-300 border ${activeCategory === category
                   ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/20"
                   : "border-border hover:border-primary/50 text-muted-foreground hover:text-foreground hover:bg-primary/5"
-              }`}
+                }`}
             >
               {category}
             </button>
@@ -196,7 +121,7 @@ const ProjectsSection = () => {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  
+
                   {/* Project Links */}
                   <div className="absolute inset-0 bg-black/40 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
                     <motion.a
@@ -213,16 +138,16 @@ const ProjectsSection = () => {
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                       <Link
+                      <Link
                         to={`/project/${project.id}`}
                         className="flex items-center justify-center w-full h-full"
                       >
-                      <ExternalLink size={20} />
+                        <ExternalLink size={20} />
                       </Link>
                     </motion.a>
                   </div>
                 </div>
-                
+
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-xs font-mono text-primary uppercase tracking-wider">
@@ -232,15 +157,15 @@ const ProjectsSection = () => {
                       {project.tech.length} techs
                     </span>
                   </div>
-                  
+
                   <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  
+
                   <p className="text-muted-foreground mb-4 line-clamp-2">
                     {project.description}
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech) => (
                       <span
@@ -255,34 +180,33 @@ const ProjectsSection = () => {
               </motion.article>
             ))}
           </div>
-
           {/* Scroll Buttons - Only show if needed */}
           {showScrollButtons && (
             <>
-            <div className="flex items-center justify-end space-x-4 sm:hidden">
-              <button
-                onClick={() => scroll("left")}
-                className=" p-3 rounded-full bg-background/80 backdrop-blur-md border shadow-lg hover:bg-primary hover:text-primary-foreground transition-all opacity-0 group-hover:opacity-100 hover:opacity-100"
-                aria-label="Scroll left"
-              >
-                <ChevronLeft size={24} />
-              </button>
-              
-              <button
-                onClick={() => scroll("right")}
-                className=" p-3 rounded-full bg-background/80 backdrop-blur-md border shadow-lg hover:bg-primary hover:text-primary-foreground transition-all opacity-0 group-hover:opacity-100 hover:opacity-100"
-                aria-label="Scroll right"
-              >
-                <ChevronRight size={24} />
-              </button>
+              <div className="flex items-center justify-end space-x-4 ">
+                <button
+                  onClick={() => scroll("left")}
+                  className=" p-3 rounded-full bg-background/80 backdrop-blur-md border shadow-lg hover:bg-primary hover:text-primary-foreground transition-all opacity-0 group-hover:opacity-100 hover:opacity-100"
+                  aria-label="Scroll left"
+                >
+                  <ChevronLeft size={24} />
+                </button>
 
-            </div>
+                <button
+                  onClick={() => scroll("right")}
+                  className=" p-3 rounded-full bg-background/80 backdrop-blur-md border shadow-lg hover:bg-primary hover:text-primary-foreground transition-all opacity-0 group-hover:opacity-100 hover:opacity-100"
+                  aria-label="Scroll right"
+                >
+                  <ChevronRight size={24} />
+                </button>
+
+              </div>
             </>
           )}
         </div>
       </div>
 
-      
+
     </section>
   );
 };

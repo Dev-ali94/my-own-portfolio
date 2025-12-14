@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Instagram, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { FaWhatsapp, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"
 
 const navLinks = [
   { id: "hero", name: "Home" },
@@ -10,6 +11,12 @@ const navLinks = [
   { id: "services", name: "Services" },
   { id: "contact", name: "Contact" },
 ];
+ const socialLink= [
+      { icon: FaGithub, href: "https://github.com/Dev-ali94" },
+      { icon: FaLinkedin, href: "https://www.linkedin.com/in/ali-imran-60b089376" },
+      { icon: FaInstagram, href: "https://www.instagram.com/ali_imran_2007?igsh=d2pieXJzdDYzeHg3" },
+      { icon: FaWhatsapp, href: "https://wa.me/923924704692" },
+    ]
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -128,7 +135,7 @@ const Navbar = () => {
 
         {/* Social Links */}
         <div className="flex items-center justify-center gap-6 mb-6">
-          {[{ icon: Github, href: "#" }, { icon: Linkedin, href: "#" }, { icon: Instagram, href: "#" }].map(
+          {socialLink.map(
             (social, index) => (
               <motion.a
                 key={index}

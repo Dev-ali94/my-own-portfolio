@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Instagram, Heart, MessageCircle, MessageCircleIcon, MessageCircleCodeIcon } from "lucide-react";
-import { FaWhatsapp} from "react-icons/fa"
+import { Heart } from "lucide-react";
+import { FaWhatsapp, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"
 const Footer = () => {
+  const socailLinks = [
+    { icon: FaGithub, href: "https://github.com/Dev-ali94" },
+    { icon: FaLinkedin, href: "https://www.linkedin.com/in/ali-imran-60b089376" },
+    { icon: FaInstagram, href: "https://www.instagram.com/ali_imran_2007?igsh=d2pieXJzdDYzeHg3" },
+    { icon: FaWhatsapp, href: "https://wa.me/923924704692" },
+  ]
   return (
     <footer className="py-8 border-t border-border">
       <div className="container mx-auto px-4">
@@ -25,12 +31,7 @@ const Footer = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            {[
-              { icon: Github, href: "#" },
-              { icon: Linkedin, href: "#" },
-              { icon: Instagram, href: "#" },
-              { icon: FaWhatsapp, href: "#" },
-            ].map((social, index) => (
+            {socailLinks.map((social, index) => (
               <motion.a
                 key={index}
                 href={social.href}

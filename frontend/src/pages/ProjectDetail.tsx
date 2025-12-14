@@ -14,190 +14,9 @@ import {
   Rocket,
   Sparkles
 } from "lucide-react";
-import { Footer } from "react-day-picker";
+import  Footer  from "@/components/Footer";
+import { projectsData } from "@/lib/data";
 
-const projectsData = [
-  {
-    id: 1,
-    title: "E-Commerce Platform",
-    description: "Full-stack e-commerce solution with payment integration",
-    fullDescription: "A comprehensive e-commerce platform built from the ground up with modern technologies. Features include product catalog management, shopping cart, secure checkout with Stripe integration, user authentication, order tracking, and admin dashboard for inventory management.",
-    image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=1200&h=600&fit=crop",
-    gallery: [
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
-    ],
-    category: "Web App",
-    tech: ["React", "Node.js", "MongoDB", "Stripe", "Redux", "AWS"],
-    client: "Fashion Retail Co.",
-    duration: "4 months",
-    team: "3 developers",
-    year: "2024",
-    challenge: "The main challenge was implementing a seamless checkout experience that could handle multiple payment methods while ensuring PCI compliance and data security.",
-    solution: "Implemented Stripe Elements for secure payment processing and designed a custom cart system with real-time inventory checks to prevent overselling.",
-    features: [
-      "Real-time inventory management",
-      "Multi-currency support",
-      "Advanced search with filters",
-      "Order tracking system",
-      "Admin analytics dashboard",
-      "Mobile-responsive design",
-    ],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 2,
-    title: "Task Management App",
-    description: "Collaborative project management tool for teams",
-    fullDescription: "A powerful project management application designed for modern teams. Built with real-time collaboration features, intuitive drag-and-drop interfaces, and comprehensive analytics to help teams stay productive.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=1200&h=600&fit=crop",
-    gallery: [
-      "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1552581234-26160f608093?w=600&h=400&fit=crop",
-    ],
-    category: "Web App",
-    tech: ["Next.js", "PostgreSQL", "Prisma", "Socket.io", "TypeScript"],
-    client: "TechStartup Inc.",
-    duration: "3 months",
-    team: "2 developers",
-    year: "2024",
-    challenge: "Creating a real-time collaboration system that could scale to thousands of concurrent users while maintaining low latency.",
-    solution: "Utilized WebSockets with Socket.io for real-time updates and implemented optimistic UI updates for a snappy user experience.",
-    features: [
-      "Real-time collaboration",
-      "Kanban board view",
-      "Time tracking",
-      "Team workspaces",
-      "File attachments",
-      "Activity timeline",
-    ],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 3,
-    title: "Fitness Tracker",
-    description: "Mobile app for tracking workouts and nutrition",
-    fullDescription: "A comprehensive fitness tracking application that helps users monitor their workouts, nutrition, and progress. Features AI-powered workout recommendations and integration with popular fitness wearables.",
-    image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1200&h=600&fit=crop",
-    gallery: [
-      "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=600&h=400&fit=crop",
-    ],
-    category: "Mobile",
-    tech: ["React Native", "Firebase", "TensorFlow", "Node.js"],
-    client: "FitLife Apps",
-    duration: "5 months",
-    team: "4 developers",
-    year: "2023",
-    challenge: "Integrating with multiple fitness wearable APIs while maintaining battery efficiency on mobile devices.",
-    solution: "Developed a unified API layer and implemented background sync strategies optimized for battery conservation.",
-    features: [
-      "Workout tracking",
-      "Nutrition logging",
-      "Progress analytics",
-      "Wearable integration",
-      "Social features",
-      "AI recommendations",
-    ],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 4,
-    title: "Finance Dashboard",
-    description: "Interactive analytics dashboard for financial data",
-    fullDescription: "An elegant financial analytics dashboard that transforms complex data into actionable insights. Features real-time data visualization, customizable reports, and AI-driven predictions.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=600&fit=crop",
-    gallery: [
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&h=400&fit=crop",
-    ],
-    category: "UI/UX",
-    tech: ["Figma", "React", "D3.js", "Python", "FastAPI"],
-    client: "FinTech Solutions",
-    duration: "2 months",
-    team: "2 developers",
-    year: "2024",
-    challenge: "Presenting large datasets in an intuitive way without overwhelming users while maintaining real-time performance.",
-    solution: "Implemented progressive loading and smart data aggregation with interactive drill-down capabilities.",
-    features: [
-      "Real-time data visualization",
-      "Custom report builder",
-      "Predictive analytics",
-      "Export to PDF/Excel",
-      "Role-based access",
-      "Dark/Light themes",
-    ],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 5,
-    title: "API Gateway",
-    description: "Scalable microservices API gateway",
-    fullDescription: "A high-performance API gateway designed for microservices architectures. Handles authentication, rate limiting, caching, and request routing with enterprise-grade reliability.",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=600&fit=crop",
-    gallery: [
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&h=400&fit=crop",
-    ],
-    category: "Backend",
-    tech: ["Node.js", "Docker", "Redis", "Kubernetes", "PostgreSQL"],
-    client: "Cloud Systems Inc.",
-    duration: "6 months",
-    team: "5 developers",
-    year: "2023",
-    challenge: "Achieving sub-10ms latency while handling 100,000+ requests per second with full observability.",
-    solution: "Implemented connection pooling, intelligent caching strategies, and distributed tracing with OpenTelemetry.",
-    features: [
-      "JWT authentication",
-      "Rate limiting",
-      "Request caching",
-      "Load balancing",
-      "Health monitoring",
-      "Auto-scaling",
-    ],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-  {
-    id: 6,
-    title: "Social Media App",
-    description: "Real-time social platform with messaging",
-    fullDescription: "A modern social media platform featuring real-time messaging, content sharing, and community features. Built with a focus on privacy and user engagement.",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&h=600&fit=crop",
-    gallery: [
-      "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1522542550221-31fd8575fab8?w=600&h=400&fit=crop",
-      "https://images.unsplash.com/photo-1516251193007-45ef944ab0c6?w=600&h=400&fit=crop",
-    ],
-    category: "Mobile",
-    tech: ["Flutter", "Firebase", "WebSocket", "Node.js", "MongoDB"],
-    client: "Social Connect Ltd.",
-    duration: "8 months",
-    team: "6 developers",
-    year: "2023",
-    challenge: "Building a scalable real-time messaging system with end-to-end encryption while maintaining a smooth user experience.",
-    solution: "Implemented a custom WebSocket layer with message queuing and client-side encryption using the Signal Protocol.",
-    features: [
-      "Real-time messaging",
-      "Story sharing",
-      "Group communities",
-      "Content moderation",
-      "Push notifications",
-      "End-to-end encryption",
-    ],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
-];
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -217,6 +36,8 @@ const ProjectDetail = () => {
   }
 
   return (
+    <>
+    
     <div className="min-h-screen py-20 overflow-x-hidden">
       <div className="container mx-auto px-4">
         {/* Back Button */}
@@ -447,8 +268,9 @@ const ProjectDetail = () => {
           </div>
         </motion.section>
       </div>
-      <Footer/>fr
     </div>
+      <Footer/>
+    </>
   );
 };
 

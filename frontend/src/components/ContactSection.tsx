@@ -6,7 +6,7 @@ import { toast } from "@/hooks/use-toast";
 const contactInfo = [
   { icon: Mail, label: "Email", value: "sheikhaliimran5452@gmail.com" },
   { icon: Phone, label: "Phone", value: "+92 3294704692" },
-  { icon: MapPin, label: "Location", value: "Punjab,Pakistan,Multan" },
+  { icon: MapPin, label: "Location", value: "Multan, Punjab, Pakistan" },
 ];
 
 const ContactSection = () => {

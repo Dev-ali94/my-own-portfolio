@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-
+import { myOwnImage } from "@/assets/assets";
 const statsData = [
   { value: "1.5+", label: "Years of Web Development" },
   { value: "4+", label: "Projects Completed" },
@@ -41,7 +41,7 @@ const AboutSection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-2xl rotate-6" />
               <div className="absolute inset-0 glass rounded-2xl overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=500&fit=crop"
+                  src={myOwnImage.My_image}
                   alt="Profile"
                   className="w-full h-full object-contain"
                 />

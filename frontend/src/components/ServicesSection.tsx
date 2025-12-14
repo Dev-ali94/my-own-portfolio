@@ -1,8 +1,9 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Code, Smartphone, Palette, Database, BarChart2, Zap, MonitorCheckIcon, MonitorDown, Monitor, Settings2, PieChartIcon, Activity, TrendingUp, ActivityIcon } from "lucide-react"
+import { Code, Database, BarChart2, Zap, Monitor,PieChartIcon } from "lucide-react"
 
-const services = [
+
+export const services = [
   {
     icon: Code,
     title: "Full Stack Development",
@@ -36,10 +37,10 @@ const services = [
 ];
 
 
+
 const ServicesSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
     <section id="services" className="py-20" ref={ref}>
       <div className="container mx-auto px-4">

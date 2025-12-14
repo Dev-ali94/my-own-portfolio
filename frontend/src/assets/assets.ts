@@ -1,3 +1,4 @@
+// asstest for skill
 import html from "../assets/html.png"
 import css from "../assets/css.png"
 import javascript from "../assets/js.png"
@@ -38,4 +39,23 @@ postgresql,
 jupyter,
 power_bi,
 excel
+}
+// asssets for image
+import My_image from "../assets/my_image.png"
+export const myOwnImage ={
+My_image
+}
+
+// assets for project card
+
+export const projectCardImages = {
+
+}
+
+export const projectDataImages = {
+    
+}
+
+export const projectCardGallerayImages = {
+    
 }
