@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Instagram, Heart } from "lucide-react";
-
+import { Github, Linkedin, Instagram, Heart, MessageCircle, MessageCircleIcon, MessageCircleCodeIcon } from "lucide-react";
+import { FaWhatsapp} from "react-icons/fa"
 const Footer = () => {
   return (
     <footer className="py-8 border-t border-border">
@@ -29,6 +29,7 @@ const Footer = () => {
               { icon: Github, href: "#" },
               { icon: Linkedin, href: "#" },
               { icon: Instagram, href: "#" },
+              { icon: FaWhatsapp, href: "#" },
             ].map((social, index) => (
               <motion.a
                 key={index}
