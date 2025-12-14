@@ -241,20 +241,14 @@ const ProjectDetail = () => {
   <img
     src={project.image}
     alt={project.title}
-    className="w-full h-64 md:h-[450px] object-cover"
+    className="w-full  md:h-[480px] h-[310px] object-cover"
   />
   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
 
   {/* Hero Text - Mobile responsive with centered content */}
-  <div className="absolute bottom-8 md:bottom-24 left-4 right-4 md:left-8 md:right-8 flex flex-col items-center text-center">
-    <motion.span
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.3 }}
-      className="inline-flex items-center gap-2 text-primary font-mono text-sm glass px-3 py-1 rounded-full mb-3"
-    >
-      <Sparkles size={14} /> {project.category}
-    </motion.span>
+  <div className="absolute bottom-8 md:bottom-24 left-4 right-4
+   md:left-8 md:right-8 flex flex-col items-center text-center">
+    
     
     {/* Title with responsive sizing */}
     <h1 className="text-3xl md:text-5xl font-bold gradient-text px-4">
