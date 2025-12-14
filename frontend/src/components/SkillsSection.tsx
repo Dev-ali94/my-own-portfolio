@@ -1,95 +1,108 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Icon } from "@iconify/react";
+import { skill_logo } from "@/assets/assets";
 
-const skills = [
-  { name: "HTML", icon: "logos:html-5" },
-  { name: "CSS", icon: "logos:css-3" },
-  { name: "JavaScript", icon: "logos:javascript" },
-  { name: "React", icon: "logos:react" },
-  { name: "Express.js", icon: "simple-icons:express" },
-  { name: "Node.js", icon: "logos:nodejs" },
-  { name: "Git", icon: "logos:git-icon" },
-  { name: "VS Code", icon: "logos:visual-studio-code" },
-  { name: "Postman", icon: "logos:postman-icon" },
-  { name: "Redux", icon: "logos:redux" },
-  { name: "Framer Motion", icon: "logos:framer" },
-  { name: "Python", icon: "logos:python" },
-  { name: "NumPy", icon: "logos:numpy" },
-  { name: "Prisma", icon: "logos:prisma" },
-  { name: "PostgreSQL", icon: "logos:postgresql" },
- { name: "MongoDB", icon: "logos:mongodb", hideName: true },       // hide text
-  { name: "Tailwind CSS", icon: "logos:tailwindcss", hideName: true }, 
-  { name: "Pandas", icon: "logos:pandas", hideName: true },
-  { name: "Excel", icon: "logos:microsoft-excel", hideName: true }, // use correct Excel icon
-  { name: "Power BI", icon: "logos:microsoft-power-bi", hideName: true }
+type Skill = {
+  name: string;
+  icon: string;
+};
+
+const skills: Skill[] = [
+  { name: "HTML", icon: skill_logo.html },
+  { name: "CSS", icon: skill_logo.css },
+  { name: "JavaScript", icon: skill_logo.javascript },
+  { name: "Tailwind CSS", icon: skill_logo.tailwand_css },
+  { name: "Framer Motion", icon: skill_logo.farmer_motion },
+  { name: "React", icon: skill_logo.react },
+  { name: "Node.js", icon: skill_logo.nodejs },
+  { name: "Express.js", icon: skill_logo.express },
+  { name: "MongoDB", icon: skill_logo.mongodb },
+  { name: "Prisma", icon: skill_logo.prisam },
+  { name: "Clerk", icon: skill_logo.clerk },
+  { name: "VS Code", icon: skill_logo.vs_code },
+  { name: "Python", icon: skill_logo.python },
+  { name: "NumPy", icon: skill_logo.numpay },
+  { name: "Pandas", icon: skill_logo.pnaday },
+  { name: "PostgreSQL", icon: skill_logo.postgresql },
+  { name: "Jupyter", icon: skill_logo.jupyter },
+  { name: "Excel", icon: skill_logo.excel },
+  { name: "Power BI", icon: skill_logo.power_bi },
 ];
 
+const marqueeTransition = {
+  repeat: Infinity,
+  ease: "linear" as const,
+  duration: 50
+};
+
 const SkillsSection = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const ref = useRef<HTMLElement | null>(null);
+  const isInView = useInView(ref, { once: true });
 
   return (
-    <section id="skills" className="py-20 overflow-hidden" ref={ref}>
-      <div className="container mx-auto px-4 mb-12">
+    <section id="skills" ref={ref} className="py-20 overflow-hidden">
+      {/* Heading */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={isInView ? { opacity: 1, y: 0 } : undefined}
+        transition={{ duration: 0.6 }}
+        className="text-center mb-14 px-4"
+      >
+        <h2 className="text-3xl md:text-5xl font-bold gradient-text mb-4">
+          Skills & Technologies
+        </h2>
+        <p className="text-muted-foreground max-w-2xl mx-auto">
+          Technologies and tools I use to bring ideas to life
+        </p>
+      </motion.div>
+
+      {/* Marquee Row 1 */}
+      <div className="relative overflow-hidden">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center"
+          className="flex w-max"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={marqueeTransition}
         >
-          <h2 className="text-3xl md:text-5xl font-bold gradient-text mb-4">
-            Skills & Technologies
-          </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Technologies and tools I use to bring ideas to life
-          </p>
+          {[...skills, ...skills].map((skill, index) => (
+            <SkillCard key={`row1-${index}`} skill={skill} />
+          ))}
         </motion.div>
       </div>
 
-      {/* Marquee Row 1 */}
-      <div className="relative mb-6">
-        <div className="flex animate-marquee">
-          {[...skills, ...skills].map((skill, index) => (
-            <div
-              key={`row1-${index}`}
-              className="flex-shrink-0 mx-3 glass glass-hover rounded-xl px-6 py-4 flex items-center gap-3 cursor-pointer group"
-            >
-              <Icon
-                icon={skill.icon}
-                className="text-2xl group-hover:scale-125 transition-transform duration-300"
-              />
-              <span className="text-sm font-medium whitespace-nowrap">
-                {skill.name}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Marquee Row 2 (Reverse) */}
-      <div className="relative">
-        <div className="flex animate-marquee-reverse">
+      <div className="relative overflow-hidden mt-6">
+        <motion.div
+          className="flex w-max"
+          animate={{ x: ["-50%", "0%"] }}
+          transition={marqueeTransition}
+        >
           {[...skills.slice().reverse(), ...skills.slice().reverse()].map(
             (skill, index) => (
-              <div
-                key={`row2-${index}`}
-                className="flex-shrink-0 mx-3 glass glass-hover rounded-xl px-6 py-4 flex items-center gap-3 cursor-pointer group"
-              >
-                <Icon
-                  icon={skill.icon}
-                  className="text-2xl group-hover:scale-125 transition-transform duration-300"
-                />
-                <span className="text-sm font-medium whitespace-nowrap">
-                  {skill.name}
-                </span>
-              </div>
+              <SkillCard key={`row2-${index}`} skill={skill} />
             )
           )}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 };
+
+type SkillCardProps = {
+  skill: Skill;
+};
+
+const SkillCard = ({ skill }: SkillCardProps) => (
+  <div className="flex-shrink-0 mx-3 glass glass-hover rounded-xl
+   px-6 py-4 flex items-center gap-3 cursor-pointer group">
+    <img
+      src={skill.icon}
+      alt={skill.name}
+      className="h-10 w-12 group-hover:scale-125 transition-transform duration-300"
+    />
+    <span className="text-sm font-medium whitespace-nowrap">
+      {skill.name}
+    </span>
+  </div>
+);
 
 export default SkillsSection;
