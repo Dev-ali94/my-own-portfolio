@@ -259,7 +259,7 @@ const ProjectsSection = () => {
           {/* Scroll Buttons - Only show if needed */}
           {showScrollButtons && (
             <>
-            <div className="flex items-center justify-end space-x-4">
+            <div className="flex items-center justify-end space-x-4 sm:hidden">
               <button
                 onClick={() => scroll("left")}
                 className=" p-3 rounded-full bg-background/80 backdrop-blur-md border shadow-lg hover:bg-primary hover:text-primary-foreground transition-all opacity-0 group-hover:opacity-100 hover:opacity-100"
