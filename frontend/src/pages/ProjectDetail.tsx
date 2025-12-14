@@ -216,7 +216,7 @@ const ProjectDetail = () => {
   }
 
   return (
-    <div className="min-h-screen py-20">
+    <div className="min-h-screen py-20 overflow-x-hidden">
       <div className="container mx-auto px-4">
         {/* Back Button */}
         <motion.div
@@ -231,8 +231,7 @@ const ProjectDetail = () => {
             <ArrowLeft size={18} /> Back to Projects
           </Link>
         </motion.div>
-
-       {/* Hero Section with CTA overlay */}
+{/* Hero Section with CTA overlay */}
 <motion.div
   initial={{ opacity: 0, y: 30 }}
   animate={{ opacity: 1, y: 0 }}
@@ -246,8 +245,8 @@ const ProjectDetail = () => {
   />
   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
 
-  {/* Hero Text */}
-  <div className="absolute bottom-24 left-4 md:left-8 right-4 md:right-8">
+  {/* Hero Text - Mobile responsive with centered content */}
+  <div className="absolute bottom-8 md:bottom-24 left-4 right-4 md:left-8 md:right-8 flex flex-col items-center text-center">
     <motion.span
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
@@ -256,37 +255,38 @@ const ProjectDetail = () => {
     >
       <Sparkles size={14} /> {project.category}
     </motion.span>
-    <h1 className="text-3xl md:text-5xl font-bold gradient-text">{project.title}</h1>
-    <p className="text-muted-foreground mt-2 max-w-2xl">{project.description}</p>
+    
+    {/* Title with responsive sizing */}
+    <h1 className="text-3xl md:text-5xl font-bold gradient-text px-4">
+      {project.title}
+    </h1>
+    
+    {/* Description with max-width and centered text */}
+    <p className="text-muted-foreground mt-2 max-w-xl px-4 text-sm md:text-base">
+      {project.description}
+    </p>
 
-    {/* CTA Buttons */}
-    <div className="mt-6 flex flex-wrap gap-4">
-      {/* Live Demo Button */}
+    {/* CTA Buttons - Responsive layout */}
+    <div className="mt-6 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto px-4">
       <motion.a
         href={project.liveUrl}
-        className="px-4 md:px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium flex items-center gap-2 hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all"
+        className="px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium flex items-center justify-center gap-2 hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all text-sm sm:text-base"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <ExternalLink size={18} />
-        <span className="hidden md:inline">Live Demo</span>
+        <ExternalLink size={18} /> Live Demo
       </motion.a>
-
-      {/* Source Code Button */}
       <motion.a
         href={project.githubUrl}
-        className="px-4 md:px-6 py-3 glass glass-hover rounded-full font-medium flex items-center gap-2"
+        className="px-6 py-3 glass glass-hover rounded-full font-medium flex items-center justify-center gap-2 text-sm sm:text-base"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <Github size={18} />
-        <span className="hidden md:inline">Source Code</span>
+        <Github size={18} /> Source Code
       </motion.a>
     </div>
   </div>
 </motion.div>
-
-
         {/* Project Info Cards */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
