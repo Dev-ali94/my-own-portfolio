@@ -42,7 +42,7 @@ const createMessageAndSend = async (req, res) => {
     });
     await sendMessage({name,email,message})
 
-    res.status(201).json({ success: true, message: "Message created successfully"});
+    res.status(201).json({ success: true, message: "Message send Sucessfully"});
   } catch (error) {
     console.error(error);
     res.status(500).json({ success: false, message: "Internal Server Error" });

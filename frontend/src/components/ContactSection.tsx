@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import api from "../config/api.ts";
 
 const contactInfo = [
   { icon: Mail, label: "Email", value: "sheikhaliimran5452@gmail.com" },
@@ -18,14 +19,37 @@ const ContactSection = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    const { data } = await api.post(
+      "/api/message/create-and-send",
+      formData
+    );
+
+    // ✅ Success toast (message comes from backend)
     toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
+      title: "Success",
+      description: data.message || "Message sent successfully",
     });
+
     setFormData({ name: "", email: "", message: "" });
-  };
+
+  } catch (error: any) {
+    console.error("Error sending message:", error);
+
+    // ✅ Backend validation / error message
+    const errorMessage =
+      error?.response?.data?.message || "Something went wrong";
+
+    toast({
+      variant: "destructive",
+      title: "Error",
+      description: errorMessage,
+    });
+  }
+};
 
   return (
     <section id="contact" className="py-20" ref={ref}>
