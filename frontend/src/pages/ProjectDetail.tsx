@@ -1,12 +1,12 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { 
-  ArrowLeft, 
-  ExternalLink, 
-  Github, 
-  Calendar, 
-  Clock, 
-  Users, 
+import {
+  ArrowLeft,
+  ExternalLink,
+  Github,
+  Calendar,
+  Clock,
+  Users,
   Target,
   Lightbulb,
   CheckCircle,
@@ -245,10 +245,10 @@ const ProjectDetail = () => {
     className="w-full h-64 md:h-[450px] object-cover"
   />
   <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
-  
+
   {/* Hero Text */}
-  <div className="absolute bottom-24 left-8 right-8">
-    <motion.span 
+  <div className="absolute bottom-24 left-4 md:left-8 right-4 md:right-8">
+    <motion.span
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.3 }}
@@ -261,25 +261,31 @@ const ProjectDetail = () => {
 
     {/* CTA Buttons */}
     <div className="mt-6 flex flex-wrap gap-4">
+      {/* Live Demo Button */}
       <motion.a
         href={project.liveUrl}
-        className="px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium flex items-center gap-2 hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all"
+        className="px-4 md:px-6 py-3 bg-primary text-primary-foreground rounded-full font-medium flex items-center gap-2 hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <ExternalLink size={18} /> Live Demo
+        <ExternalLink size={18} />
+        <span className="hidden md:inline">Live Demo</span>
       </motion.a>
+
+      {/* Source Code Button */}
       <motion.a
         href={project.githubUrl}
-        className="px-6 py-3 glass glass-hover rounded-full font-medium flex items-center gap-2"
+        className="px-4 md:px-6 py-3 glass glass-hover rounded-full font-medium flex items-center gap-2"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
       >
-        <Github size={18} /> Source Code
+        <Github size={18} />
+        <span className="hidden md:inline">Source Code</span>
       </motion.a>
     </div>
   </div>
 </motion.div>
+
 
         {/* Project Info Cards */}
         <motion.div
@@ -294,8 +300,8 @@ const ProjectDetail = () => {
             { icon: Calendar, label: "Year", value: project.year },
             { icon: Layers, label: "Team", value: project.team },
           ].map((info, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               className="glass glass-hover rounded-xl p-5 text-center card-hover"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -446,7 +452,7 @@ const ProjectDetail = () => {
           </div>
         </motion.section>
 
-        
+
       </div>
     </div>
   );
