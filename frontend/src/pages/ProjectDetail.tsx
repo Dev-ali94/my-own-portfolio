@@ -14,6 +14,7 @@ import {
   Rocket,
   Sparkles
 } from "lucide-react";
+import { Footer } from "react-day-picker";
 
 const projectsData = [
   {
@@ -445,9 +446,8 @@ const ProjectDetail = () => {
             ))}
           </div>
         </motion.section>
-
-
       </div>
+      <Footer/>fr
     </div>
   );
 };
