@@ -128,13 +128,13 @@ export const projectsData = [
     title: "Interview Platform",
     description: "A complete platform for coding interviews with real-time collaboration.",
     fullDescription: "This web application provides a secure and interactive environment for technical interviews. It includes authentication with Clerk, real-time chat, video calls, and a collaborative coding editor similar to VS Code. Users can solve coding problems in the platform while sharing screens and collaborating seamlessly. The UI is built using TanssStack for a modern and responsive experience.",
-    image: projectThreeImages.image3_1,
+    image: projectThreeImages.image3_2,
     gallery: [
        projectThreeImages.image3_1,
-      projectThreeImages.image3_2,
-      projectThreeImages.image3_3,
-      projectThreeImages.image3_4,
-      projectThreeImages.image3_5,
+       projectThreeImages.image3_2,
+       projectThreeImages.image3_3,
+       projectThreeImages.image3_4,
+       projectThreeImages.image3_5,
     ],
     category: "Web Application",
     tech: [
@@ -155,8 +155,8 @@ export const projectsData = [
     year: "2025",
     challenge: "The main challenge was building a real-time chat and video calling system and integrating a fully functional code editor within the platform.",
     solution: "To solve this, I used Stream for chat and video calls, Piston API for the code editor, and react-resizable-panels for adjustable layouts.",
-    highlights: [
-      "Clean and responsive UI with TanssStack",
+     features: [
+      "Clean and responsive UI with dasiy UI",
       "Secure authentication using Clerk",
       "Create and manage multiple sessions",
       "Collaborative problem solving",
@@ -171,6 +171,8 @@ export const projectsData = [
     ],
     liveUrl: "#",
     githubUrl: "https://github.com/Dev-ali94/code-iq",
-  }
-
+  }  
 ];
+
+
+
