@@ -244,7 +244,8 @@ const ProjectDetail = () => {
           className="mb-12"
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 
+            to-accent/20 flex items-center justify-center">
               <Sparkles className="text-primary" size={18} />
             </div>
             <h2 className="text-2xl font-bold gradient-text">Gallery</h2>
@@ -261,7 +262,7 @@ const ProjectDetail = () => {
                 <img
                   src={img}
                   alt={`${project.title} screenshot ${index + 1}`}
-                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-48 object-full hover:scale-105 transition-transform duration-300"
                 />
               </motion.div>
             ))}

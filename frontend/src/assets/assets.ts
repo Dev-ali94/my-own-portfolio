@@ -45,17 +45,3 @@ import My_image from "../assets/my_image.png"
 export const myOwnImage ={
 My_image
 }
-
-// assets for project card
-
-export const projectCardImages = {
-
-}
-
-export const projectDataImages = {
-    
-}
-
-export const projectCardGallerayImages = {
-    
-}

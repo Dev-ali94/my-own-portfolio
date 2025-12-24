@@ -48,7 +48,7 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            Full-Stack Developer & Data Analyst building meaningful digital experiences.
+         Full-Stack Developer and Data Analyst specializing in scalable web applications and data-driven insights.
           </motion.p>
 
           <motion.div

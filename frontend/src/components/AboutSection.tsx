@@ -4,9 +4,9 @@ import { useRef } from "react";
 import { myOwnImage } from "@/assets/assets";
 const statsData = [
   { value: "1.5+", label: "Years of Web Development" },
-  { value: "4+", label: "Projects Completed" },
   { value: "6+", label: "Months in Data Analytics" },
-  { value: "100%", label: "Learning Mindset" },
+  { value: "4+", label: "Projects Completed" },
+  { value: "100%", label: "Learning Mindset" }
 ];
 
 
@@ -55,13 +55,12 @@ const AboutSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <p className="text-muted-foreground mb-8 leading-relaxed text-lg">
+            <p className="text-muted-foreground mb-3 leading-relaxed text-lg">
               I'm a passionate full-stack web developer with over 1.5 years of hands-on
               experience building modern, responsive web applications. I specialize in
               React, Node.js, and crafting intuitive user interfaces that focus on
               performance, usability, and clean design.
             </p>
-
             <p className="text-muted-foreground mb-8 leading-relaxed">
               Alongside web development, I have around 6 months of experience as a data
               analyst, working with data to uncover insights, create visualizations, and
