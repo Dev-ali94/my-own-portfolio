@@ -41,7 +41,7 @@ power_bi,
 excel
 }
 // asssets for image
-import My_image from "../assets/my_image.png"
+import My_image from "../assets/my_image.jpg"
 export const myOwnImage ={
 My_image
 }

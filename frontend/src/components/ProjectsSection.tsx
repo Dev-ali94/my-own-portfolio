@@ -133,7 +133,6 @@ const ProjectsSection = () => {
                       <Github size={20} />
                     </motion.a>
                     <motion.a
-                      href={project.live}
                       className="p-3 bg-background/80 backdrop-blur-md rounded-full hover:bg-primary hover:text-white transition-colors"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}

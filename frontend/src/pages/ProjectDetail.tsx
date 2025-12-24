@@ -50,7 +50,8 @@ const ProjectDetail = () => {
 
           {/* Hero Section */}
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} className="relative rounded-3xl overflow-hidden mb-12">
-            <img src={project.image} alt={project.title} className="w-full md:h-[480px] h-[310px] object-cover" />
+            <img src={project.image} alt={project.title} className="w-full md:h-[480px] 
+            h-[310px] object-fill" />
             <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
             <div className="absolute bottom-8 md:bottom-24 left-4 right-4 md:left-8 md:right-8 flex flex-col items-center text-center">
               <h1 className="text-3xl md:text-5xl font-bold gradient-text px-4">{project.title}</h1>

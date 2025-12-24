@@ -38,12 +38,13 @@ const AboutSection = () => {
             className="relative"
           >
             <div className="aspect-square max-w-md mx-auto relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-2xl rotate-6" />
-              <div className="absolute inset-0 glass rounded-2xl overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 
+              rounded-2xl rotate-6" />
+              <div className="absolute inset-0 glass rounded-2xl overflow-hidden ">
                 <img
                   src={myOwnImage.My_image}
                   alt="Profile"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </div>
