@@ -1,42 +1,41 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Code, Database, BarChart2, Zap, Monitor,PieChartIcon } from "lucide-react"
+import { Code, Database, Monitor, Zap, SmartphoneIcon, ServerIcon } from "lucide-react"
+
 
 
 export const services = [
   {
     icon: Code,
-    title: "Full Stack Development",
-    description: "Developing robust web applications with seamless integration between frontend and backend using modern technologies.",
+    title: "Full-Stack Development",
+    description: "Building robust web applications with smooth integration between frontend and backend using modern technologies.",
   },
   {
     icon: Monitor,
     title: "Frontend Development",
-    description: "Creating responsive and interactive user interfaces that deliver a smooth and engaging user experience.",
+    description: "Creating responsive, interactive, and visually appealing user interfaces for an engaging user experience.",
   },
   {
     icon: Database,
-    title: "Database Management",
-    description: "Designing and maintaining scalable, secure, and efficient databases to support application data needs.",
-  },
-  {
-    icon: PieChartIcon,
-    title: "Data Analytics",
-    description: "Analyzing complex data sets to extract actionable insights and support informed business decisions.",
-  },
-  {
-    icon: BarChart2,
-    title: "Power BI Development",
-    description: "Building interactive dashboards and visual reports in Power BI to visualize key metrics and trends.",
+    title: "Backend & Database Management",
+    description: "Designing and maintaining scalable, secure, and efficient backend systems and databases.",
   },
   {
     icon: Zap,
     title: "Performance Optimization",
-    description: "Enhancing application speed, efficiency, and reliability to ensure a superior user experience.",
+    description: "Improving application speed, reliability, and efficiency for a superior user experience.",
+  },
+  {
+    icon: SmartphoneIcon,
+    title: "Responsive Design",
+    description: "Ensuring applications work seamlessly across devices and screen sizes with mobile-first design principles.",
+  },
+  {
+    icon: ServerIcon,
+    title: "API Development & Integration",
+    description: "Building and integrating RESTful APIs to connect services and enable smooth data communication.",
   },
 ];
-
-
 
 const ServicesSection = () => {
   const ref = useRef(null);

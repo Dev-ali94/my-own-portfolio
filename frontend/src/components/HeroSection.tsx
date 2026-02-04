@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
-import {Download,MouseIcon } from "lucide-react";
+import { Download, MouseIcon } from "lucide-react";
 import { FaWhatsapp, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"
 
 const HeroSection = () => {
-  const socialLink= [
-      { icon: FaGithub, href: "https://github.com/Dev-ali94" },
-      { icon: FaLinkedin, href: "https://www.linkedin.com/in/ali-imran-60b089376" },
-      { icon: FaInstagram, href: "https://www.instagram.com/ali_imran_2007?igsh=d2pieXJzdDYzeHg3" },
-      { icon: FaWhatsapp, href: "https://wa.me/923924704692" },
-    ]
+  const socialLink = [
+    { icon: FaGithub, href: "https://github.com/Dev-ali94" },
+    { icon: FaLinkedin, href: "https://www.linkedin.com/in/ali-imran-60b089376" },
+    { icon: FaInstagram, href: "https://www.instagram.com/ali_imran_2007?igsh=d2pieXJzdDYzeHg3" },
+    { icon: FaWhatsapp, href: "https://wa.me/923924704692" },
+  ]
   return (
     <section
       id="home"
@@ -43,12 +43,12 @@ const HeroSection = () => {
           </motion.h1>
 
           <motion.p
-            className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto"
+            className="text-xl md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-         Full-Stack Developer and Data Analyst specializing in scalable web applications and data-driven insights.
+            Full-Stack Developer building scalable web applications with modern technologies, focused on clean code and performance.
           </motion.p>
 
           <motion.div
@@ -57,7 +57,7 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
           >
-           <motion.a
+            <motion.a
               href="#projects"
               className="px-8 py-3 bg-primary text-primary-foreground rounded-full font-medium hover:shadow-[0_0_30px_hsl(var(--primary)/0.5)] transition-all duration-300"
               whileHover={{ scale: 1.05 }}

@@ -20,14 +20,7 @@ export const skills: Skill[] = [
   { name: "Prisma", icon: skill_logo.prisam },
   { name: "Clerk", icon: skill_logo.clerk },
   { name: "VS Code", icon: skill_logo.vs_code },
-  { name: "Python", icon: skill_logo.python },
-  { name: "NumPy", icon: skill_logo.numpay },
-  { name: "Pandas", icon: skill_logo.pnaday },
-  { name: "PostgreSQL", icon: skill_logo.postgresql },
-  { name: "Jupyter", icon: skill_logo.jupyter },
-  { name: "Excel", icon: skill_logo.excel },
-  { name: "Power BI", icon: skill_logo.power_bi },
-];
+]
 
 const marqueeTransition = {
   repeat: Infinity,

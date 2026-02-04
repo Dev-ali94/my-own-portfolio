@@ -8,7 +8,7 @@ export const projects = [
     title: "Authentication System",
     description: "A secure authentication system featuring user registration and email-based login with a scalable backend architecture.",
     image: projectOneImage.image2,
-    category: "Web Development",
+    category: "FullStack",
     tech: ["React", "Node.js", "Express", "MongoDB"],
     github: "https://github.com/Dev-ali94/authentication-app",
   },
@@ -18,7 +18,7 @@ export const projects = [
     title: "Project Management System",
     description: "A project management system that allows creating organizations, inviting team members, and efficiently tracking projects.",
     image: projectTwoImages.image2_1,
-    category: "Web Development",
+    category: "FullStack",
     tech: ["React", "Node.js", "Express", "Neon", "Prisma"],
     github: "https://github.com/Dev-ali94/project-managment-app",
 
@@ -29,20 +29,20 @@ export const projects = [
     title: "Interview Platform",
     description: "This app contain interview platfrom as well problem code facilit like leetcode ",
     image: projectThreeImages.image3_1,
-    category: "Web Development",
+    category: "FullStack",
     tech: ["React", "Node.js", "Express", "MongoDB", "stream"],
     github: "https://github.com/Dev-ali94/authentication-app",
   },
-  // project 4 card
-{
-  id: 4,
-  title: "Portfolio Website with Admin Panel",
-  description: "A dynamic portfolio website featuring an admin panel to manage projects, create new entries, and view contact information easily and all website is animated.",
-  image: projectFourImages.image4_3,
-  category: "Web Development",
-  tech: ["React", "Node.js", "Express", "MongoDB"],
-  github: "https://github.com/Dev-ali94/portfolio-with-admin-panel",
-}
+  {
+    id: 4,
+    title: "Portfolio Website",
+    description: "A modern and fully responsive portfolio website with smooth animations, showcasing projects and skills in an interactive way.",
+    image: projectFourImages.image4_1,
+    category: "Frontend",
+    tech: ["React", "CSS", "Framer-Motion"],
+    github: "https://github.com/Dev-ali94/modren-portfolio",
+  }
+
 
 ];
 export const projectsData = [
@@ -140,11 +140,11 @@ export const projectsData = [
     fullDescription: "This web application provides a secure and interactive environment for technical interviews. It includes authentication with Clerk, real-time chat, video calls, and a collaborative coding editor similar to VS Code. Users can solve coding problems in the platform while sharing screens and collaborating seamlessly. The UI is built using TanssStack for a modern and responsive experience.",
     image: projectThreeImages.image3_2,
     gallery: [
-       projectThreeImages.image3_1,
-       projectThreeImages.image3_2,
-       projectThreeImages.image3_3,
-       projectThreeImages.image3_4,
-       projectThreeImages.image3_5,
+      projectThreeImages.image3_1,
+      projectThreeImages.image3_2,
+      projectThreeImages.image3_3,
+      projectThreeImages.image3_4,
+      projectThreeImages.image3_5,
     ],
     category: "Web Application",
     tech: [
@@ -165,7 +165,7 @@ export const projectsData = [
     year: "2025",
     challenge: "The main challenge was building a real-time chat and video calling system and integrating a fully functional code editor within the platform.",
     solution: "To solve this, I used Stream for chat and video calls, Piston API for the code editor, and react-resizable-panels for adjustable layouts.",
-     features: [
+    features: [
       "Clean and responsive UI with dasiy UI",
       "Secure authentication using Clerk",
       "Create and manage multiple sessions",
@@ -182,52 +182,45 @@ export const projectsData = [
     liveUrl: "#",
     githubUrl: "https://github.com/Dev-ali94/code-iq",
   },
-  // project 4 Detail
   {
-  id: 4,
-  title: "Portfolio Website with Admin Panel",
-  description: "A fully responsive portfolio website with smooth animations and a powerful admin panel for managing projects and user interactions.",
-  fullDescription: "This portfolio application includes an admin panel with GSAP-powered animations. Admins can create, edit, and manage projects, review and respond to user comments, and access contact form submissions. The platform also supports secure admin login and cloud-based image storage using Cloudinary.",
-   image: projectFourImages.image4_5,
-  gallery: [
-   projectFourImages.image4_5,
-    projectFourImages.image4_6,
-    projectFourImages.image4_5,
-    projectFourImages.image4_4,
-    projectFourImages.image4_1,
-    projectFourImages.image4_2,
-    projectFourImages.image4_7,
-    projectFourImages.image4_3
-  ],
-  category: "Web Application",
-  tech: [
-    "React",
-    "Node.js",
-    "Express",
-    "MongoDB",
-    "GSAP",
-    "Cloudinary"
-  ],
-  client: "Personal Project",
-  duration: "1.5 Weeks",
-  team: "Solo Developer",
-  year: "2025",
-  challenge: "Implementing smooth animations while managing dynamic project data, securing admin access, and integrating cloud-based image storage.",
-  solution: "Used GSAP for animations, implemented secure authentication and authorization for admin access, and leveraged Cloudinary for reliable cloud image storage.",
-  features: [
-    "Clean, responsive, and modern UI",
-    "Smooth animations using GSAP",
-    "Admin panel for creating and managing projects",
-    "Users can add comments on project details",
-    "Interactive contact form with submission tracking",
-    "Admin can review all comments and contact messages",
-    "Cloud-based image storage using Cloudinary",
-    "Secure admin authentication and authorization",
-    "Real-time project management and updates"
-  ],
-  liveUrl: "#",
-  githubUrl: "https://github.com/Dev-ali94/code-iq"
-}
+    id: 4,
+    title: "Modern Portfolio",
+    description: "A fully responsive portfolio website featuring smooth animations and interactive sections to showcase projects, skills, and contact information.",
+    fullDescription: "This frontend-only portfolio website demonstrates modern web design techniques with a focus on user experience. Built with React and GSAP, it includes animated sections for projects, skills, and contact forms. The website is fully responsive and optimized for all devices.",
+    image: projectFourImages.image4_5,
+    gallery: [
+      projectFourImages.image4_1,
+      projectFourImages.image4_2,
+      projectFourImages.image4_3,
+      projectFourImages.image4_4,
+      projectFourImages.image4_5,
+    ],
+    category: "Frontend",
+    tech: [
+      "javascript",
+      "tailwand css",
+      "React",
+      "lucied-react",
+      "Framer-Motion"
+    ],
+    client: "Personal Project",
+    duration: "1 Week",
+    team: "Solo Developer",
+    year: "2026",
+    challenge: "Creating smooth animations while keeping the site lightweight, fully responsive, and interactive without backend functionality.",
+    solution: "Used GSAP for smooth animations, React for modular component structure, and modern CSS techniques for responsiveness and interactivity.",
+    features: [
+      "Clean, modern, and fully responsive design",
+      "Smooth animations using GSAP",
+      "Interactive project showcase with image gallery",
+      "Skills section with animated progress indicators",
+      "Contact form (frontend-only, can be integrated with email service)",
+      "Navigation with smooth scrolling between sections",
+      "Optimized for mobile and desktop devices"
+    ],
+    liveUrl: "#",
+    githubUrl: "https://github.com/Dev-ali94/modren-portfolio"
+  }
 
 ];
 

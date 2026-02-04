@@ -4,7 +4,7 @@ import { ExternalLink, Github, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { projects } from "../lib/data.ts"
 
-const categories = ["All", "Web Development", "Power BI", "Data Analytics"];
+const categories = ["All", "FullStack", "Frontend", "Ai Integration", "Backend"];
 const ProjectsSection = () => {
   const [activeCategory, setActiveCategory] = useState("All");
   const [showScrollButtons, setShowScrollButtons] = useState(false);
@@ -88,8 +88,8 @@ const ProjectsSection = () => {
               key={category}
               onClick={() => setActiveCategory(category)}
               className={`px-4 py-2 rounded-full font-medium transition-all duration-300 border ${activeCategory === category
-                  ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/20"
-                  : "border-border hover:border-primary/50 text-muted-foreground hover:text-foreground hover:bg-primary/5"
+                ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/20"
+                : "border-border hover:border-primary/50 text-muted-foreground hover:text-foreground hover:bg-primary/5"
                 }`}
             >
               {category}
