@@ -120,7 +120,7 @@ export const projectsData = [
       "Flexible settings and workflow management",
       "Integrated chat system for team communication"
     ],
-    liveUrl: "#",
+    liveUrl: "https://project-managment-app-six.vercel.app",
     githubUrl: "https://github.com/Dev-ali94/project-managment-app",
   },
   // Project 3 Detail
@@ -164,7 +164,7 @@ export const projectsData = [
       "Escalation to human agents for complex issues",
       "Easy integration with existing Scripts and CRM systems"
     ],
-    liveUrl: "#",
+    liveUrl: "https://customer-support-chat-bot-one.vercel.app/",
     githubUrl: "https://github.com/Dev-ali94/Customer-Support-ChatBot",
   },
 ];
