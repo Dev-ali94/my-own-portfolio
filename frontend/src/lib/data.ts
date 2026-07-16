@@ -6,7 +6,7 @@ export const projects = [
     id: 1,
     title: "Authentication System",
     description: "A secure authentication system featuring user registration and email-based login with a scalable backend architecture.",
-    image: project1Images.image1_2,
+    image: project1Images.image1_1,
     category: "FullStack",
     tech: ["React", "Node.js", "Express", "MongoDB"],
     github: "https://github.com/Dev-ali94/authentication-app",

@@ -10,14 +10,8 @@ import express from "../assets/express.png"
 import mongodb from "../assets/MongoDB.png"
 import prisam from "../assets/prism.png"
 import vs_code from "../assets/vs code.png"
-import clerk from "../assets/clerk.png"
-import python from "../assets/python.png"
-import pnaday from "../assets/Pandas.png"
-import numpay from "../assets/NumPy.png"
 import postgresql from "../assets/postgresql.png"
-import jupyter from "../assets/jupyter.png"
-import power_bi from "../assets/power bi.png"
-import excel from "../assets/excel.png"
+
 
 export const skill_logo={
 html,
@@ -30,15 +24,8 @@ nodejs,
 express,
 mongodb,
 prisam,
-clerk,
 vs_code,
-python,
-numpay,
-pnaday,
-postgresql,
-jupyter,
-power_bi,
-excel
+postgresql
 }
 // asssets for image
 import My_image from "../assets/my_image.jpg"
