@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Code, Database, Monitor, Zap, SmartphoneIcon, ServerIcon } from "lucide-react"
+import { Code, Database, Monitor, Zap, SmartphoneIcon, ServerIcon, Search, Megaphone, BadgeDollarSign } from "lucide-react"
 
 
 
@@ -20,21 +20,21 @@ export const services = [
     title: "Backend & Database Management",
     description: "Designing and maintaining scalable, secure, and efficient backend systems and databases.",
   },
-  {
-    icon: Zap,
-    title: "Performance Optimization",
-    description: "Improving application speed, reliability, and efficiency for a superior user experience.",
-  },
-  {
-    icon: SmartphoneIcon,
-    title: "Responsive Design",
-    description: "Ensuring applications work seamlessly across devices and screen sizes with mobile-first design principles.",
-  },
-  {
-    icon: ServerIcon,
-    title: "API Development & Integration",
-    description: "Building and integrating RESTful APIs to connect services and enable smooth data communication.",
-  },
+{
+  icon: Search,
+  title: "SEO Optimization",
+  description: "Improving website visibility with technical SEO, on-page optimization, keyword strategy, and performance enhancements.",
+},
+{
+  icon: Megaphone,
+  title: "Meta Ads",
+  description: "Creating and optimizing Facebook & Instagram ad campaigns to increase reach, engagement, leads, and conversions.",
+},
+{
+  icon: BadgeDollarSign,
+  title: "Google Ads",
+  description: "Managing high-performing Google Search, Display, and Performance Max campaigns to drive targeted traffic and maximize ROI.",
+},
 ];
 
 const ServicesSection = () => {

@@ -5,8 +5,8 @@ import { myOwnImage } from "@/assets/assets";
 const statsData = [
   { value: "2+", label: "Years of Web Development" },
   { value: "7+", label: "Happay Client" },
-  { value: "8+", label: "Projects Completed" },
-  { value: "100%", label: "Learning Mindset" }
+  { value: "4+", label: "Projects Completed" },
+  { value: "1.5+", label: "Years of Digital Marketing" }
 ];
 
 
@@ -56,21 +56,22 @@ const AboutSection = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <p className="text-muted-foreground mb-3 leading-relaxed text-lg">
-              I'm a passionate full-stack web developer with over 2 years of hands-on experience
-              building modern, responsive web applications. I specialize in React and Node.js,
-              crafting intuitive user interfaces and robust backend systems that focus on
-              performance, scalability, and clean, maintainable code.
-            </p>
-            <p className="text-muted-foreground mb-8 leading-relaxed">
-              I enjoy exploring new technologies, experimenting with innovative solutions, and
-              continuously improving my skills to stay at the forefront of web development.
-              My approach combines technical expertise with a focus on user experience, ensuring
-              that every application I build is practical, efficient, and delivers real-world
-              impact. When I’m not coding, I like contributing to the developer community,
-              learning from others, and sharing knowledge to help push the boundaries of what’s
-              possible on the web.
-            </p>
+          <p className="text-muted-foreground mb-3 leading-relaxed text-lg">
+  I'm a passionate Full-Stack Web Developer and Digital Marketing Expert with over
+  2 years of hands-on experience building modern, responsive web applications and
+  executing data-driven marketing strategies. I specialize in React, Node.js, SEO,Facebook Ads, Google Ads
+  and performance marketing, creating scalable digital solutions that combine clean
+  code, exceptional user experiences, and measurable business growth.
+</p>
+
+<p className="text-muted-foreground mb-8 leading-relaxed">
+  I enjoy exploring emerging technologies, optimizing websites for performance and
+  search engines, and developing innovative marketing campaigns that drive engagement
+  and conversions. My approach blends technical expertise with strategic digital
+  marketing, ensuring every project is fast, user-friendly, and results-oriented.
+  I'm committed to continuous learning, staying ahead of industry trends, and
+  delivering impactful web solutions that help businesses grow and succeed online.
+</p>
 
 
             {/* Stats Cards */}

@@ -18,7 +18,6 @@ export const skills: Skill[] = [
   { name: "Express.js", icon: skill_logo.express },
   { name: "MongoDB", icon: skill_logo.mongodb },
   { name: "Prisma", icon: skill_logo.prisam },
-  { name: "Clerk", icon: skill_logo.clerk },
   { name: "VS Code", icon: skill_logo.vs_code },
 ]
 

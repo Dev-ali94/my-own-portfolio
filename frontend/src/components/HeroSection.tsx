@@ -5,7 +5,7 @@ import { FaWhatsapp, FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"
 const HeroSection = () => {
   const socialLink = [
     { icon: FaGithub, href: "https://github.com/Dev-ali94" },
-    { icon: FaLinkedin, href: "https://www.linkedin.com/in/ali-imran-60b089376" },
+    { icon: FaLinkedin, href: "https://www.linkedin.com/in/ali-imran-sheikh-32b14a3b6" },
     { icon: FaInstagram, href: "https://www.instagram.com/ali_imran_2007?igsh=d2pieXJzdDYzeHg3" },
     { icon: FaWhatsapp, href: "https://wa.me/923924704692" },
   ]
@@ -48,7 +48,7 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            Full-Stack Developer building scalable web applications with modern technologies, focused on clean code and performance.
+            Full-Stack Web Developer & Digital Marketing Expert experienced in building scalable web applications and growth-driven digital strategies.
           </motion.p>
 
           <motion.div
