@@ -1,4 +1,4 @@
-import { project1Images} from "@/images/image.js"
+import { project1Images,project2Images} from "@/images/image.js"
 
 export const projects = [
   // project 1 card
@@ -6,7 +6,7 @@ export const projects = [
     id: 1,
     title: "Authentication System",
     description: "A secure authentication system featuring user registration and email-based login with a scalable backend architecture.",
-    image: project1Images.image1_1,
+    image: project1Images.image1_2,
     category: "FullStack",
     tech: ["React", "Node.js", "Express", "MongoDB"],
     github: "https://github.com/Dev-ali94/authentication-app",
@@ -16,7 +16,7 @@ export const projects = [
     id: 2,
     title: "Project Management System",
     description: "A project management system that allows creating organizations, inviting team members, and efficiently tracking projects.",
-    image: projectTwoImages.image2_1,
+    image: project2Images.image2_1,
     category: "FullStack",
     tech: ["React", "Node.js", "Express", "Neon", "Prisma"],
     github: "https://github.com/Dev-ali94/project-managment-app",
@@ -33,14 +33,14 @@ export const projectsData = [
     title: "Authentication System",
     description: "A highly secure authentication system featuring user registration, email verification with OTP, password reset functionality, and a scalable backend architecture.",
     fullDescription: "This web application is built with full security in mind. It includes email verification with OTP for new users, a secure password reset system, and measures to prevent unauthorized access. Additional security features include rate-limiting for OTP resends, strong password validation, and protection against common attacks.",
-    image: projectOneImage.image1,
+    image: project1Images.image1_1,
     gallery: [
-      projectOneImage.image1,
-      projectOneImage.image2,
-      projectOneImage.image3,
-      projectOneImage.image4,
-      projectOneImage.image5,
-      projectOneImage.image6,
+      project1Images.image1_1,
+      project1Images.image1_2,
+      project1Images.image1_3,
+      project1Images.image1_4,
+      project1Images.image1_5,
+      project1Images.image1_6,
     ],
     category: "Web App",
     tech: ["React", "Node.js", "MongoDB", "Express", "JSON Web Token", "Bcrypt", "CORS", "Nodemailer", "React-Toastify"],
@@ -69,14 +69,14 @@ export const projectsData = [
     title: "Project Management System",
     description: "A secure and feature-rich project management system for creating organizations, inviting team members, managing tasks, and tracking progress efficiently.",
     fullDescription: "This web application is built with security and productivity in mind. Users can create workspaces, invite members, create and assign projects and tasks, track progress, view analytics, manage settings, and communicate through an integrated chat system. The system is fully responsive, ensuring smooth usage on all devices, with a focus on usability and workflow optimization.",
-    image: projectTwoImages.image2_1,
+    image: project2Images.image2_1,
     gallery: [
-      projectTwoImages.image2_1,
-      projectTwoImages.image2_2,
-      projectTwoImages.image2_3,
-      projectTwoImages.image2_4,
-      projectTwoImages.image2_5,
-      projectTwoImages.image2_6
+      project2Images.image2_1,
+      project2Images.image2_2,
+      project2Images.image2_3,
+      project2Images.image2_4,
+      project2Images.image2_5,
+      project2Images.image2_6
     ],
     category: "Web Application",
     tech: [
