@@ -1,4 +1,4 @@
-import { project1Images,project2Images} from "@/images/image.js"
+import { project1Images,project2Images,project3Images} from "@/images/image.js"
 
 export const projects = [
   // project 1 card
@@ -18,8 +18,18 @@ export const projects = [
     description: "A project management system that allows creating organizations, inviting team members, and efficiently tracking projects.",
     image: project2Images.image2_1,
     category: "FullStack",
-    tech: ["React", "Node.js", "Express", "Neon", "Prisma"],
+    tech: ["React", "Node.js", "Express", "Neon", "prisma"],
     github: "https://github.com/Dev-ali94/project-managment-app",
+  },
+    // project 3 card
+  {
+    id: 3,
+    title: "AI Powered ChatBot System",
+    description: "An AI-powered chatbot system for automated customer support and interaction.",
+    image: project3Images.image3_1,
+    category: "FullStack",
+    tech: ["React", "Node.js", "Express", "Neon", "Drizzle ORM","scalekit"],
+    github: "https://github.com/Dev-ali94/Customer-Support-ChatBot",
 
   },
  
@@ -112,6 +122,50 @@ export const projectsData = [
     ],
     liveUrl: "#",
     githubUrl: "https://github.com/Dev-ali94/project-managment-app",
+  },
+  // Project 3 Detail
+  {
+    id: 3,
+    title: "Customer Support ChatBot",
+    description: "An intelligent chatbot for providing instant customer support and resolving queries efficiently.",
+    fullDescription: "This chatbot is designed to handle common customer inquiries, provide product information, and escalate complex issues to human agents. It integrates seamlessly with existing CRM systems and offers a natural conversation flow to enhance user experience.",
+    image: project3Images.image3_1,
+    gallery: [
+      project3Images.image3_1,
+      project3Images.image3_2,
+      project3Images.image3_3,
+      project3Images.image3_4,
+      project3Images.image3_5
+    ],
+    category: "Web Application",
+    tech: [
+      "React",
+      "Node.js",
+      "Express",
+      "Neon",
+      "Drizzle ORM",
+      "Scalekit",
+      "OpenRouter Api",
+      "postgresSql"
+    ],
+    client: "Personal Project",
+    duration: "1 Month",
+    team: "1 Developer",
+    year: "2026",
+    challenge: "The main challenges were integrating AI without relying on paid APIs, implementing secure authentication, extracting reliable data from websites, and ensuring secure communication between the chatbot and clients while maintaining performance and scalability.",
+    solution: "Integrated AI using OpenRouter for free access to multiple LLMs, implemented ScaleKit for secure authentication and user management, used GenRows to fetch and process website data efficiently, and built secure APIs to protect data exchange between the chatbot and clients. Optimized the application for scalability, responsiveness, and a seamless user experience.",
+    features: [
+      "Clean and responsive UI",
+      "Secure authentication with ScaleKit",
+      "Natural language processing with OpenRouter",
+      "Easily create and manage Knowledge Bases",
+      "Real-time chat interface for customer support",
+      "Automated responses for common queries",
+      "Escalation to human agents for complex issues",
+      "Easy integration with existing Scripts and CRM systems"
+    ],
+    liveUrl: "#",
+    githubUrl: "https://github.com/Dev-ali94/Customer-Support-ChatBot",
   },
 ];
 

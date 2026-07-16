@@ -29,3 +29,18 @@ export const project2Images = {
     image2_5,
     image2_6
 }
+
+import image3_1 from './project_3.1.png';
+import image3_2 from './project_3.2.png';
+import image3_3 from './project_3.3.png';
+import image3_4 from './project_3.4.png';
+import image3_5 from './project_3.5.png';
+
+
+export const project3Images = {
+    image3_1,
+    image3_2,
+    image3_3,
+    image3_4,
+    image3_5
+}
