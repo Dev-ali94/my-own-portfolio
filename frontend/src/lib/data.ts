@@ -23,25 +23,7 @@ export const projects = [
     github: "https://github.com/Dev-ali94/project-managment-app",
 
   },
-  // project 3 card 
-  {
-    id: 3,
-    title: "Interview Platform",
-    description: "This app contain interview platfrom as well problem code facilit like leetcode ",
-    image: projectThreeImages.image3_1,
-    category: "FullStack",
-    tech: ["React", "Node.js", "Express", "MongoDB", "stream"],
-    github: "https://github.com/Dev-ali94/authentication-app",
-  },
-  {
-    id: 4,
-    title: "Portfolio Website",
-    description: "A modern and fully responsive portfolio website with smooth animations, showcasing projects and skills in an interactive way.",
-    image: projectFourImages.image4_1,
-    category: "Frontend",
-    tech: ["React", "CSS", "Framer-Motion"],
-    github: "https://github.com/Dev-ali94/modren-portfolio",
-  }
+ 
 
 
 ];
@@ -132,96 +114,6 @@ export const projectsData = [
     liveUrl: "#",
     githubUrl: "https://github.com/Dev-ali94/project-managment-app",
   },
-  // project 3 Detail
-  {
-    id: 3,
-    title: "Interview Platform",
-    description: "A complete platform for coding interviews with real-time collaboration.",
-    fullDescription: "This web application provides a secure and interactive environment for technical interviews. It includes authentication with Clerk, real-time chat, video calls, and a collaborative coding editor similar to VS Code. Users can solve coding problems in the platform while sharing screens and collaborating seamlessly. The UI is built using TanssStack for a modern and responsive experience.",
-    image: projectThreeImages.image3_2,
-    gallery: [
-      projectThreeImages.image3_1,
-      projectThreeImages.image3_2,
-      projectThreeImages.image3_3,
-      projectThreeImages.image3_4,
-      projectThreeImages.image3_5,
-    ],
-    category: "Web Application",
-    tech: [
-      "React",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "Inngest",
-      "Clerk",
-      "Stream",
-      "react-hot-toast",
-      "Piston API",
-      "daisey UI"
-    ],
-    client: "Personal Project",
-    duration: "2 Weeks",
-    team: "1 Developer",
-    year: "2025",
-    challenge: "The main challenge was building a real-time chat and video calling system and integrating a fully functional code editor within the platform.",
-    solution: "To solve this, I used Stream for chat and video calls, Piston API for the code editor, and react-resizable-panels for adjustable layouts.",
-    features: [
-      "Clean and responsive UI with dasiy UI",
-      "Secure authentication using Clerk",
-      "Create and manage multiple sessions",
-      "Collaborative problem solving",
-      "Integrated code editor",
-      "Real-time video calls",
-      "Screen sharing",
-      "Support for multiple coding problems",
-      "problem-solving features",
-      "Real time code editor",
-      "video call functionality",
-      "screen sharing functionality",
-    ],
-    liveUrl: "#",
-    githubUrl: "https://github.com/Dev-ali94/code-iq",
-  },
-  {
-    id: 4,
-    title: "Modern Portfolio",
-    description: "A fully responsive portfolio website featuring smooth animations and interactive sections to showcase projects, skills, and contact information.",
-    fullDescription: "This frontend-only portfolio website demonstrates modern web design techniques with a focus on user experience. Built with React and GSAP, it includes animated sections for projects, skills, and contact forms. The website is fully responsive and optimized for all devices.",
-    image: projectFourImages.image4_5,
-    gallery: [
-      projectFourImages.image4_1,
-      projectFourImages.image4_2,
-      projectFourImages.image4_3,
-      projectFourImages.image4_4,
-      projectFourImages.image4_5,
-    ],
-    category: "Frontend",
-    tech: [
-      "javascript",
-      "tailwand css",
-      "React",
-      "lucied-react",
-      "Framer-Motion"
-    ],
-    client: "Personal Project",
-    duration: "1 Week",
-    team: "Solo Developer",
-    year: "2026",
-    challenge: "Creating smooth animations while keeping the site lightweight, fully responsive, and interactive without backend functionality.",
-    solution: "Used GSAP for smooth animations, React for modular component structure, and modern CSS techniques for responsiveness and interactivity.",
-    features: [
-      "Clean, modern, and fully responsive design",
-      "Smooth animations using GSAP",
-      "Interactive project showcase with image gallery",
-      "Skills section with animated progress indicators",
-      "Contact form (frontend-only, can be integrated with email service)",
-      "Navigation with smooth scrolling between sections",
-      "Optimized for mobile and desktop devices"
-    ],
-    liveUrl: "#",
-    githubUrl: "https://github.com/Dev-ali94/modren-portfolio"
-  }
-
 ];
 
 
