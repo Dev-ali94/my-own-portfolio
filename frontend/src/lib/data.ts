@@ -1,6 +1,16 @@
 import { project1Images,project2Images,project3Images} from "@/images/image.js"
 
 export const projects = [
+    // project 2 card
+  {
+    id: 2,
+    title: "Project Management System",
+    description: "A project management system that allows creating organizations, inviting team members, and efficiently tracking projects.",
+    image: project2Images.image2_1,
+    category: "FullStack",
+    tech: ["React", "Node.js", "Express", "Neon", "prisma"],
+    github: "https://github.com/Dev-ali94/project-managment-app",
+  },
   // project 1 card
   {
     id: 1,
@@ -11,16 +21,7 @@ export const projects = [
     tech: ["React", "Node.js", "Express", "MongoDB"],
     github: "https://github.com/Dev-ali94/authentication-app",
   },
-  // project 2 card
-  {
-    id: 2,
-    title: "Project Management System",
-    description: "A project management system that allows creating organizations, inviting team members, and efficiently tracking projects.",
-    image: project2Images.image2_1,
-    category: "FullStack",
-    tech: ["React", "Node.js", "Express", "Neon", "prisma"],
-    github: "https://github.com/Dev-ali94/project-managment-app",
-  },
+
     // project 3 card
   {
     id: 3,
